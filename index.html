@@ -10,7 +10,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
@@ -21,7 +21,7 @@
             padding: 20px;
             color: #1f2937;
         }
-        
+
         .container {
             background: white;
             border-radius: 20px;
@@ -32,18 +32,18 @@
             width: 100%;
             animation: fadeIn 0.6s ease-out;
         }
-        
+
         @keyframes fadeIn {
-            from { 
-                opacity: 0; 
-                transform: translateY(20px); 
+            from {
+                opacity: 0;
+                transform: translateY(20px);
             }
-            to { 
-                opacity: 1; 
-                transform: translateY(0); 
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
-        
+
         .success-icon {
             width: 100px;
             height: 100px;
@@ -58,7 +58,7 @@
             font-weight: bold;
             position: relative;
         }
-        
+
         .success-icon::after {
             content: '';
             position: absolute;
@@ -69,7 +69,7 @@
             opacity: 0.3;
             animation: ping 2s infinite;
         }
-        
+
         @keyframes ping {
             0% {
                 transform: scale(1);
@@ -80,21 +80,21 @@
                 opacity: 0;
             }
         }
-        
+
         h1 {
             font-size: 32px;
             margin-bottom: 15px;
             color: #1f2937;
             font-weight: 700;
         }
-        
+
         .subtitle {
             color: #6b7280;
             font-size: 18px;
             margin-bottom: 30px;
             line-height: 1.5;
         }
-        
+
         .payment-info {
             background: #f0fdf4;
             border: 2px solid #bbf7d0;
@@ -103,7 +103,7 @@
             margin: 30px 0;
             text-align: left;
         }
-        
+
         .info-row {
             display: flex;
             justify-content: space-between;
@@ -111,23 +111,23 @@
             padding: 12px 0;
             border-bottom: 1px solid #dcfce7;
         }
-        
+
         .info-row:last-child {
             border-bottom: none;
         }
-        
+
         .info-label {
             color: #374151;
             font-weight: 500;
             font-size: 14px;
         }
-        
+
         .info-value {
             color: #059669;
             font-weight: 600;
             font-size: 14px;
         }
-        
+
         .return-button {
             display: inline-block;
             background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
@@ -144,16 +144,16 @@
             width: 100%;
             box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
         }
-        
+
         .return-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
         }
-        
+
         .return-button:active {
             transform: translateY(0);
         }
-        
+
         .auto-redirect {
             background: #eff6ff;
             border: 1px solid #bfdbfe;
@@ -163,12 +163,12 @@
             font-size: 14px;
             color: #1e40af;
         }
-        
+
         .countdown {
             font-weight: 600;
             color: #4f46e5;
         }
-        
+
         .instructions {
             background: #fffbeb;
             border-left: 4px solid #f59e0b;
@@ -177,7 +177,7 @@
             border-radius: 8px;
             text-align: left;
         }
-        
+
         .instructions-title {
             color: #92400e;
             font-weight: 600;
@@ -186,27 +186,27 @@
             display: flex;
             align-items: center;
         }
-        
+
         .instructions-title::before {
             content: '💡';
             margin-right: 8px;
         }
-        
+
         .instructions-text {
             color: #78350f;
             font-size: 14px;
             line-height: 1.6;
         }
-        
+
         .instructions ol {
             margin: 12px 0;
             padding-left: 20px;
         }
-        
+
         .instructions li {
             margin: 8px 0;
         }
-        
+
         .session-id {
             font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
             background: #f3f4f6;
@@ -214,23 +214,23 @@
             border-radius: 4px;
             font-size: 12px;
         }
-        
+
         @media (max-width: 480px) {
             .container {
                 padding: 25px;
                 margin: 10px;
             }
-            
+
             h1 {
                 font-size: 26px;
             }
-            
+
             .success-icon {
                 width: 80px;
                 height: 80px;
                 font-size: 40px;
             }
-            
+
             .success-icon::after {
                 width: 100px;
                 height: 100px;
@@ -239,198 +239,198 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="success-icon">✓</div>
-        
-        <h1>Payment Successful!</h1>
-        <p class="subtitle">
-            Your payment has been processed successfully.<br>
-            Thank you for your purchase!
-        </p>
-        
-        <div class="payment-info">
-            <div class="info-row">
-                <span class="info-label">Status</span>
-                <span class="info-value">✓ Completed</span>
-            </div>
-            <div class="info-row">
-                <span class="info-label">Date</span>
-                <span class="info-value" id="payment-date">Loading...</span>
-            </div>
-            <div class="info-row">
-                <span class="info-label">Session</span>
-                <span class="info-value session-id" id="session-display">Loading...</span>
-            </div>
-            <div class="info-row">
-                <span class="info-label">Transaction</span>
-                <span class="info-value">Stripe Checkout</span>
-            </div>
+<div class="container">
+    <div class="success-icon">✓</div>
+
+    <h1>Payment Successful!</h1>
+    <p class="subtitle">
+        Your payment has been processed successfully.<br>
+        Thank you for your purchase!
+    </p>
+
+    <div class="payment-info">
+        <div class="info-row">
+            <span class="info-label">Status</span>
+            <span class="info-value">✓ Completed</span>
         </div>
-        
-        <button class="return-button" onclick="returnToApp()" id="return-btn">
-            Return to Application
-        </button>
-        
-        <div class="auto-redirect" id="auto-redirect">
-            Automatically returning in <span class="countdown" id="countdown">8</span> seconds...
+        <div class="info-row">
+            <span class="info-label">Date</span>
+            <span class="info-value" id="payment-date">Loading...</span>
         </div>
-        
-        <div class="instructions">
-            <div class="instructions-title">Return to Your Desktop App</div>
-            <div class="instructions-text">
-                <ol>
-                    <li><strong>Click "Return to Application"</strong> above</li>
-                    <li>If the app doesn't open, <strong>manually launch your desktop application</strong></li>
-                    <li>Your payment is confirmed and your account will be updated</li>
-                    <li>If you encounter issues, restart the desktop application</li>
-                </ol>
-                
-                <div style="margin-top: 15px; padding: 10px; background: #f0f9ff; border-radius: 6px; border-left: 3px solid #0284c7;">
-                    <strong style="color: #0c4a6e;">✅ Payment Confirmed</strong><br>
-                    <span style="color: #0369a1; font-size: 13px;">
-                        Your subscription is being activated. Check your account in the desktop app.
-                    </span>
-                </div>
-            </div>
+        <div class="info-row">
+            <span class="info-label">Session</span>
+            <span class="info-value session-id" id="session-display">Loading...</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Transaction</span>
+            <span class="info-value">Stripe Checkout</span>
         </div>
     </div>
 
-    <script>
-        // Extract URL parameters
-        function getUrlParameter(name) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(name);
-        }
-        
-        // Initialize page
-        document.addEventListener('DOMContentLoaded', function() {
-            // Update payment date
-            document.getElementById('payment-date').textContent = new Date().toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            });
-            
-            // Update session info
-            const sessionId = getUrlParameter('session_id');
-            const customSession = getUrlParameter('custom_session');
-            const displaySession = customSession || sessionId || 'N/A';
-            
-            document.getElementById('session-display').textContent = 
-                displaySession.length > 25 ? displaySession.substring(0, 25) + '...' : displaySession;
-            
-            // Start countdown
-            startCountdown();
-            
-            // Log for debugging
-            console.log('Payment success page loaded');
-            console.log('Session ID:', sessionId);
-            console.log('Custom Session:', customSession);
+    <button class="return-button" onclick="returnToApp()" id="return-btn">
+        Return to Application
+    </button>
+
+    <div class="auto-redirect" id="auto-redirect">
+        Automatically returning in <span class="countdown" id="countdown">8</span> seconds...
+    </div>
+
+    <div class="instructions">
+        <div class="instructions-title">Return to Your Desktop App</div>
+        <div class="instructions-text">
+            <ol>
+                <li><strong>Click "Return to Application"</strong> above</li>
+                <li>If the app doesn't open, <strong>manually launch your desktop application</strong></li>
+                <li>Your payment is confirmed and your account will be updated</li>
+                <li>If you encounter issues, restart the desktop application</li>
+            </ol>
+
+            <div style="margin-top: 15px; padding: 10px; background: #f0f9ff; border-radius: 6px; border-left: 3px solid #0284c7;">
+                <strong style="color: #0c4a6e;">✅ Payment Confirmed</strong><br>
+                <span style="color: #0369a1; font-size: 13px;">
+                        Your subscription is being activated. Check your account in the desktop app.
+                    </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Extract URL parameters
+    function getUrlParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    // Initialize page
+    document.addEventListener('DOMContentLoaded', function() {
+        // Update payment date
+        document.getElementById('payment-date').textContent = new Date().toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
         });
-        
-        let countdownInterval;
-        
-        function startCountdown() {
-            let timeLeft = 8;
-            const countdownElement = document.getElementById('countdown');
-            
-            countdownInterval = setInterval(function() {
-                timeLeft--;
-                if (countdownElement) {
-                    countdownElement.textContent = timeLeft;
-                }
-                
-                if (timeLeft <= 0) {
-                    clearInterval(countdownInterval);
-                    returnToApp();
-                }
-            }, 1000);
-        }
-        
-        function returnToApp() {
-            const sessionId = getUrlParameter('session_id');
-            const customSession = getUrlParameter('custom_session');
-            
-            // Use the custom session if available, otherwise use the Stripe session
-            const sessionToUse = customSession || sessionId || '';
-            
-            // Build return URL
-            const returnUrl = `kmm-app://payment-complete?session=${encodeURIComponent(sessionToUse)}&status=success&timestamp=${Date.now()}&source=webpage`;
-            
-            console.log('Attempting to return to desktop app:', returnUrl);
-            
-            try {
-                // Update button text
-                const returnBtn = document.getElementById('return-btn');
-                if (returnBtn) {
-                    returnBtn.textContent = 'Opening Application...';
-                    returnBtn.style.background = '#6b7280';
-                }
-                
-                // Clear countdown
-                if (countdownInterval) {
-                    clearInterval(countdownInterval);
-                }
-                
-                // Attempt to open the app
-                window.location.href = returnUrl;
-                
-                // Provide feedback after attempt
-                setTimeout(function() {
-                    const autoRedirect = document.getElementById('auto-redirect');
-                    if (autoRedirect) {
-                        autoRedirect.innerHTML = `
-                            <div style="color: #f59e0b; font-weight: 600;">
-                                🚀 Return attempt made!
-                            </div>
-                            <div style="font-size: 13px; margin-top: 5px; color: #92400e;">
-                                If your app didn't open, please launch it manually.
-                            </div>
-                        `;
-                    }
-                    
-                    // Reset button
-                    if (returnBtn) {
-                        returnBtn.textContent = 'Try Again';
-                        returnBtn.style.background = 'linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)';
-                    }
-                }, 2500);
-                
-            } catch (error) {
-                console.error('Failed to open desktop app:', error);
-                
-                // Show error message
+
+        // Update session info
+        const sessionId = getUrlParameter('session_id');
+        const customSession = getUrlParameter('custom_session');
+        const displaySession = customSession || sessionId || 'N/A';
+
+        document.getElementById('session-display').textContent =
+            displaySession.length > 25 ? displaySession.substring(0, 25) + '...' : displaySession;
+
+        // Start countdown
+        startCountdown();
+
+        // Log for debugging
+        console.log('Payment success page loaded');
+        console.log('Session ID:', sessionId);
+        console.log('Custom Session:', customSession);
+    });
+
+    let countdownInterval;
+
+    function startCountdown() {
+        let timeLeft = 8;
+        const countdownElement = document.getElementById('countdown');
+
+        countdownInterval = setInterval(function() {
+            timeLeft--;
+            if (countdownElement) {
+                countdownElement.textContent = timeLeft;
+            }
+
+            if (timeLeft <= 0) {
+                clearInterval(countdownInterval);
+                returnToApp();
+            }
+        }, 1000);
+    }
+
+    function returnToApp() {
+        const sessionId = getUrlParameter('session_id');
+        const customSession = getUrlParameter('custom_session');
+
+        // Use the custom session if available, otherwise use the Stripe session
+        const sessionToUse = customSession || sessionId || '';
+
+        // Build return URL
+        const returnUrl = `com.voice.flow://payment-success?session_id=${encodeURIComponent(sessionToUse)}&status=success&timestamp=${Date.now()}`;
+
+        console.log('Attempting to return to desktop app:', returnUrl);
+
+        try {
+            // Update button text
+            const returnBtn = document.getElementById('return-btn');
+            if (returnBtn) {
+                returnBtn.textContent = 'Opening Application...';
+                returnBtn.style.background = '#6b7280';
+            }
+
+            // Clear countdown
+            if (countdownInterval) {
+                clearInterval(countdownInterval);
+            }
+
+            // Attempt to open the app
+            window.location.href = returnUrl;
+
+            // Provide feedback after attempt
+            setTimeout(function() {
                 const autoRedirect = document.getElementById('auto-redirect');
                 if (autoRedirect) {
                     autoRedirect.innerHTML = `
-                        <div style="color: #dc2626; font-weight: 600;">
-                            ⚠️ Unable to auto-open the app
+                        <div style="color: #f59e0b; font-weight: 600;">
+                            🚀 Return attempt made!
                         </div>
-                        <div style="font-size: 13px; margin-top: 5px; color: #991b1b;">
-                            Please manually open your desktop application.
+                        <div style="font-size: 13px; margin-top: 5px; color: #92400e;">
+                            If your app didn't open, please launch it manually.
                         </div>
                     `;
                 }
+
+                // Reset button
+                if (returnBtn) {
+                    returnBtn.textContent = 'Try Again';
+                    returnBtn.style.background = 'linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)';
+                }
+            }, 2500);
+
+        } catch (error) {
+            console.error('Failed to open desktop app:', error);
+
+            // Show error message
+            const autoRedirect = document.getElementById('auto-redirect');
+            if (autoRedirect) {
+                autoRedirect.innerHTML = `
+                    <div style="color: #dc2626; font-weight: 600;">
+                        ⚠️ Unable to auto-open the app
+                    </div>
+                    <div style="font-size: 13px; margin-top: 5px; color: #991b1b;">
+                        Please manually open your desktop application.
+                    </div>
+                `;
             }
         }
-        
-        // Handle page visibility changes
-        document.addEventListener('visibilitychange', function() {
-            if (document.hidden && countdownInterval) {
-                // User likely switched to the app, stop countdown
-                clearInterval(countdownInterval);
-                console.log('Page hidden, stopping countdown');
-            }
-        });
-        
-        // Prevent multiple rapid clicks
-        let isReturning = false;
-        document.addEventListener('click', function(e) {
-            if (e.target.id === 'return-btn' && !isReturning) {
-                isReturning = true;
-                setTimeout(() => { isReturning = false; }, 3000);
-            }
-        });
-    </script>
+    }
+
+    // Handle page visibility changes
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden && countdownInterval) {
+            // User likely switched to the app, stop countdown
+            clearInterval(countdownInterval);
+            console.log('Page hidden, stopping countdown');
+        }
+    });
+
+    // Prevent multiple rapid clicks
+    let isReturning = false;
+    document.addEventListener('click', function(e) {
+        if (e.target.id === 'return-btn' && !isReturning) {
+            isReturning = true;
+            setTimeout(() => { isReturning = false; }, 3000);
+        }
+    });
+</script>
 </body>
 </html>
