@@ -354,8 +354,8 @@
         // Use the custom session if available, otherwise use the Stripe session
         const sessionToUse = customSession || sessionId || '';
 
-        // Build return URL
-        const returnUrl = `com.voice.flow://payment-success?session_id=${encodeURIComponent(sessionToUse)}&status=success&timestamp=${Date.now()}`;
+        // Build return URL - use localhost callback for desktop apps
+        const returnUrl = `http://localhost:8080/payment-success?session_id=${encodeURIComponent(sessionToUse)}&status=success`;
 
         console.log('Attempting to return to desktop app:', returnUrl);
 
